@@ -13,7 +13,11 @@ class App extends React.Component {
   render() {
   return (
     <ErrorBoundary FallbackComponent={ErrorPage}>
-    <div className="App">하이연</div>
+    <div className="App">
+      
+      하이연
+    
+    </div>
     </ErrorBoundary>
   );
   }
