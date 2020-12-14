@@ -1,25 +1,29 @@
+import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import {ErrorBoundary} from 'react-error-boundary';
 
-function App() {
+
+function Button() {
+  throw new Error("멍");
+  return <button>에러</button>;
+}
+
+
+function ErrorPage() {
+  return (<div>아앗 에러가 났다.</div>);
+}
+
+class App extends React.Component {
+  render() {
   return (
+    <ErrorBoundary FallbackComponent={ErrorPage}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Button />
     </div>
+    </ErrorBoundary>
   );
+  }
+  
 }
 
 export default App;
