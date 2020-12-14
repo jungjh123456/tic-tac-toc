@@ -3,10 +3,6 @@ import logo from './logo.svg';
 import {ErrorBoundary} from 'react-error-boundary';
 
 
-function Button() {
-  throw new Error("멍");
-  return <button>에러</button>;
-}
 
 
 function ErrorPage() {
@@ -17,9 +13,7 @@ class App extends React.Component {
   render() {
   return (
     <ErrorBoundary FallbackComponent={ErrorPage}>
-    <div className="App">
-     <Button />
-    </div>
+    <div className="App">하이연</div>
     </ErrorBoundary>
   );
   }
