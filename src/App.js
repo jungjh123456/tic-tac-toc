@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import {ErrorBoundary} from 'react-error-boundary';
+import Game from './components/Game';
 
 
 
@@ -12,13 +13,9 @@ function ErrorPage() {
 class App extends React.Component {
   render() {
   return (
-    <ErrorBoundary FallbackComponent={ErrorPage}>
     <div className="App">
-      
-      하이연
-    
+      <Game />
     </div>
-    </ErrorBoundary>
   );
   }
   
